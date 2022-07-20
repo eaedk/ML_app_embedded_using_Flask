@@ -21,18 +21,44 @@ def home():
     )
 
 
+# Demo page of the app
 @app.route("/demo", methods=["GET", "POST"])
 def demo():
+
+    prediction = ""
+
+    # If a form is submitted
+    if request.method == "POST":
+        pass
+        # Get values through input bars
+
+        # Put inputs to dataframe
+
+        # Apply the preprocessing
+
+        # Apply the feature engineering
+
+        # Get predictions
+
+    return render_template("demo.html", output=prediction)
+
+
+# example: an example
+@app.route("/example", methods=["GET", "POST"])
+def example():
 
     # If a form is submitted
     if request.method == "POST":
 
         # Get values through input bars
-        height = request.form.get("height")
-        weight = request.form.get("weight")
+        var_001 = request.form.get("__var_001__")
+        var_002 = request.form.get("__var_002__")
+        var_003 = request.form.get("__var_003__")
 
         # Put inputs to dataframe
-        X = pd.DataFrame([[height, weight]], columns=["Height", "Weight"])
+        X = pd.DataFrame(
+            [[var_001, var_002, var_003]], columns=["var_001", "var_002", "var_003"]
+        )
 
         # Get predictions
         prediction = estimator.predict(X)[0]
@@ -40,7 +66,7 @@ def demo():
     else:
         prediction = ""
 
-    return render_template("demo.html", output=prediction)
+    return render_template("example.html", output=prediction)
 
 
 # Running the app
