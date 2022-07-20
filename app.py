@@ -1,8 +1,7 @@
 from flask import Flask, request, render_template
 import pandas as pd
 import joblib, os
-
-# from utils import __required_classes_and_functions__
+import utils
 
 
 # Unpickle the ML model
@@ -35,10 +34,13 @@ def demo():
         # Put inputs to dataframe
 
         # Apply the preprocessing
+        utils.preprocessing
 
         # Apply the feature engineering
+        utils.feature_engineering
 
         # Get predictions
+        # estimator.predict
 
     return render_template("demo.html", output=prediction)
 
