@@ -3,11 +3,9 @@
 ## Create the venv
 python3 -m venv venv
 
-## Activate the env on Unix
-source venv/bin/activate
-
-## Activate the env on Windows
-venv\Scripts\activate
+## Activate the env
+source venv/bin/activate        #this line will work in linux
+venv\Scripts\activate           # this it the code  for windows.
 
 ## Deactivate the env
 deactivate
@@ -15,3 +13,8 @@ deactivate
 
 # Install required packages
 pip install -qR requirements.txt
+
+# confi
+export FLASK_APP=script.py   #this line will work in linux
+set FLASK_APP=script.py      # this it the code  for windows.
+run flask
