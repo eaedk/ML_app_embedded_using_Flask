@@ -1,7 +1,7 @@
 # Setup virtual environment
 
 ## Create the venv
-python33 -m venv venv
+python3 -m venv venv
 
 ## Activate the venv
 source venv/bin/activate        #this line will work in linux
@@ -15,7 +15,10 @@ deactivate
 pip3 install --upgrade pip               # update pip first before to use it, to avoid warning
 pip3 install -qr requirements.txt
 
-# Config quick excecution
-export FLASK_APP=script.py   #this line will work in linux
-set FLASK_APP=script.py      # this it the code  for windows.
+# Config quick execution
+export FLASK_APP=app.py   #this line will work in linux
+set FLASK_APP=app.py      # this it the code  for windows.
 run flask
+
+# Normal app execution
+python3 app.py
