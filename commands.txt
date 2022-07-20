@@ -12,7 +12,7 @@ deactivate
 
 
 # Install required packages
-pip3 install --upgrade pip3               # update pip3 first before to use it, to avoid warning
+pip3 install --upgrade pip               # update pip first before to use it, to avoid warning
 pip3 install -qr requirements.txt
 
 # Config quick excecution
