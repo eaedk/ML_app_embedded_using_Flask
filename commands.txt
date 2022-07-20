@@ -3,11 +3,11 @@
 ## Create the venv
 python33 -m venv venv
 
-## Activate the env
+## Activate the venv
 source venv/bin/activate        #this line will work in linux
 venv\Scripts\activate           # this it the code  for windows.
 
-## Deactivate the env
+## Deactivate the venv
 deactivate
 
 
