@@ -9,5 +9,9 @@ source venv/bin/activate
 ## Activate the env on Windows
 venv\Scripts\activate
 
+## Deactivate the env
+deactivate
+
+
 # Install required packages
 pip install -qR requirements.txt
