@@ -12,6 +12,7 @@ deactivate
 
 
 # Install required packages
+pip install --upgrade pip               # update pip first before to use it, to avoid warning
 pip install -qr requirements.txt
 
 # Config quick excecution
