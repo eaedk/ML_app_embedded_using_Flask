@@ -1,7 +1,13 @@
 # Setup virtual environment
+
+## Create the venv
 python3 -m venv venv
+
+## Activate the env on Unix
 source venv/bin/activate
- 
+
+## Activate the env on Windows
+venv\Scripts\activate
 
 # Install required packages
-pip install flask
+pip install -qR requirements.txt
