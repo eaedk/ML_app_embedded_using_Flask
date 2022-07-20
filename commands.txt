@@ -12,9 +12,9 @@ deactivate
 
 
 # Install required packages
-pip install -qR requirements.txt
+pip install -qr requirements.txt
 
-# confi
+# Config quick excecution
 export FLASK_APP=script.py   #this line will work in linux
 set FLASK_APP=script.py      # this it the code  for windows.
 run flask
