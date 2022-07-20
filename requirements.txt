@@ -1,2 +1,2 @@
-Flask
-Scikit-learn
+flask
+scikit-learn
