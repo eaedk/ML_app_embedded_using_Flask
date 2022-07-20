@@ -1,6 +1,11 @@
 # This is the the file that must contain the functions and classes that will be used in the app
 
 import pandas as pd
+import os, joblib
+
+# Unpickle the pipelines for preprocessing and feature engineering
+# pipe_ = joblib.load(os.path.join("ml", "__the_pipeline__.pkl"))
+# pipe_ = joblib.load(os.path.join("ml", "__the_pipeline__.pkl"))
 
 
 def preprocessing(data) -> pd.DataFrame:
