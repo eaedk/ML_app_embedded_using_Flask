@@ -58,17 +58,15 @@ def example():
         var_003 = request.form.get("__var_003__")
 
         # Put inputs to dataframe
-        X = pd.DataFrame(
+        df = pd.DataFrame(
             [[var_001, var_002, var_003]], columns=["var_001", "var_002", "var_003"]
         )
-
-        # Get predictions
-        prediction = estimator.predict(X)[0]
-
     else:
-        prediction = ""
+        df = pd.DataFrame()
 
-    return render_template("example.html", output=prediction)
+    return render_template(
+        "example.html", tables=[df.to_html(classes="data")], titles=df.columns.values
+    )
 
 
 # Running the app
