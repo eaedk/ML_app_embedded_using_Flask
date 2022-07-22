@@ -12,13 +12,18 @@
         <br>
         Var_001: <input type="number" name="__var_001__" , placeholder="Type the value" required />
         <br><br>
-        Var_002: <input type="number" name="__var_002__" , placeholder="Type the value" required />
+        Var_002: <input type="text" name="__var_002__" , placeholder="Type the value" required />
         <br><br>
         Var_003: <input type="number" name="__var_003__" , placeholder="Type the value" required />
         <br><br>
         <button>Run</button>
     </form>
-    <p style="text-align: center;">{{ output }}</p>
+
+    {% for table in tables %}
+    {{titles[loop.index]}}
+    {{ table|safe }}
+    {% endfor %}
+    <!-- <p style="text-align: center;">{{ output }}</p> -->
 
 </body>
 

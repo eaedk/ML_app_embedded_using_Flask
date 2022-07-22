@@ -20,3 +20,8 @@ form {
     padding: 10px;
     border: black solid 5px;
 }
+table {
+    display: block;
+    align-tracks: center;
+    align-self: center;
+}
