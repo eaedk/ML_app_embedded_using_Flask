@@ -5,7 +5,7 @@ import utils
 
 
 # Unpickle the ML model
-estimator = joblib.load(os.path.join("ml", "__the_model__.pkl"))
+# estimator = joblib.load(os.path.join("ml", "__the_model__.pkl"))
 
 
 # Declare a Flask app
