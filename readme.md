@@ -1,5 +1,5 @@
 # Description
-This repository is a starter code to present to help you to embed your machine learning model into a Flask app.
+This [repository](https://github.com/eaedk/ML_app_embeded_using_Flask) is a starter code to present to help you to embed your machine learning model into a Flask app.
 
 # Structure
 ## File: app.py
