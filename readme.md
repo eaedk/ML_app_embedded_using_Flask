@@ -50,7 +50,7 @@ python app.py
  * Debugger PIN: 616-705-964
 ```
 
-If there is an error try `python3` instead of `python`.
+If there is an error, replace `python3` by `python`.
 
 If everything is ok go to your browser at, http://127.0.0.1:5000 you will see you blank homepage you must design and fill.
 You can go to the example page to have a look at a small form doing nothing special: http://127.0.0.1:5000/example .
