@@ -8,11 +8,7 @@ def app():
     return app
 
 
-def test_index_route(app):
+def test_example_route(app):
     response = app.test_client().get("/")
 
     assert response.status_code == 200
-    assert (
-        "Hello, I am your blank home page, you must fill me up."
-        in response.data.decode("utf-8")
-    )
