@@ -22,3 +22,6 @@ run flask
 
 # Normal app execution
 python app.py
+
+# Run tests
+python -m pytest -v
