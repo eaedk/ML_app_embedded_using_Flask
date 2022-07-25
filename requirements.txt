@@ -1,3 +1,4 @@
 flask
 scikit-learn
 pandas
+pytest-flask
