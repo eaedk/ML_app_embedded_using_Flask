@@ -78,7 +78,7 @@ def create_app():
             titles=df.columns.values,
         )
 
-    class PredictorsForm(Form):
+    class TitanicForm(Form):
         """
         This is a form class to retrieve the input from user through form
         Inherits: request.form class
@@ -93,7 +93,7 @@ def create_app():
 
     @app.route('/predict', methods=['GET', 'POST'])
     def predict():
-        form = PredictorsForm(request.form)
+        form = TitanicForm(request.form)
         
         # Checking if user submitted the form and the values are valid
         if request.method == 'POST' and form.validate():
