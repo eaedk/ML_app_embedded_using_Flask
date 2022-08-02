@@ -1,4 +1,5 @@
 flask
+WTForms
 scikit-learn
 pandas
 pytest-flask
