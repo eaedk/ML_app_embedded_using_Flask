@@ -1,4 +1,4 @@
-# 🚀 Embed ML models using Flask 🚀
+# 🚀 Embed ML models into a web app using Flask 🚀
 
 There are many ways to make web interfaces to allow interaction with Machine Learning models and we will cover one of them.
 
