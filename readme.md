@@ -2,11 +2,12 @@
 
 There are many ways to make web interfaces to allow interaction with Machine Learning models and we will cover one of them.
 
-[![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
 [![MIT licensed](https://img.shields.io/badge/license-mit-blue?style=for-the-badge&logo=appveyor)](./LICENSE)
 ![Issues](https://img.shields.io/github/issues/eaedk/ML_app_embeded_using_Flask?style=for-the-badge&logo=appveyor)
 ![PR](https://img.shields.io/github/issues-pr/eaedk/ML_app_embeded_using_Flask?style=for-the-badge&logo=appveyor)
-[![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
 
 
 ## Description
