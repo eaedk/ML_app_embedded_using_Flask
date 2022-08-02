@@ -1,65 +1,111 @@
-# Description
-This [repository](https://github.com/eaedk/ML_app_embeded_using_Flask) is a starter code to present to help you to embed your machine learning model into a Flask app.
+# 🚀 Embed ML models using Flask 🚀
 
-# Structure
-## File: app.py
+There are many ways to make web interfaces to allow interaction with Machine Learning models and we will cover one of them.
+
+[![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+[![MIT licensed](https://img.shields.io/badge/license-mit-blue?style=for-the-badge&logo=appveyor)](./LICENSE)
+![Issues](https://img.shields.io/github/issues/eaedk/ML_app_embeded_using_Flask?style=for-the-badge&logo=appveyor)
+![PR](https://img.shields.io/github/issues-pr/eaedk/ML_app_embeded_using_Flask?style=for-the-badge&logo=appveyor)
+[![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+
+## Description
+
+You will have a minimal interface demo with [Flask](), this will just serve you to make sure that everything works correctly. Then, you will have to make your own interfaces, those allowing you to interact with a Machine Learning model, that is to say:
+- Pass values through the interface;
+- Recover these values in backend;
+- Apply the necessary processing;
+- Submit the previously processed values to the ML model to make the predictions;
+- Process the predictions obtained and display them on the interface.
+
+## Installation
+
+You have two ways in order to setup and run this project.
+
+### Manual Setup
+
+For manual installation, you need to have [`Python3`](https://www.python.org/) on your system. Then you can clone this repo and being at the repo's `root :: ML_app_embeded_using_Flask> ...`  follow the steps below:
+
+- Create a virtual environment with the command :
+        
+        python3 -m venv venv
+
+- Activate the virtual environment with the command :
+  
+  Windows:
+
+      venv/bin/activate 
+  
+  Linux & Mac: 
+
+      source venv/bin/activate
+
+- Install the necessary dependencies with the command :
+        
+      python -m pip install --upgrade pip; python -m pip install -r requirements.txt
+
+- Run the Flask app :
+  - Go to your browser at the following address :
+        
+      http://127.0.0.1:5000
+        
+  - Endpoints:
+    
+    - Demo
+
+          /example
+
+    - Titanic survival prediction
+
+          /... 
+
+
+
+
+
+## Structure
+### File: app.py
 This file must contain the Flask app. You will define the page endpoints, the logic that will be executed on each page of the Flask app and the html template to use for each endpoint.
 
-## File: utils.py
+### File: utils.py
 This file must contain the functions or/and classes you have written to do preprocessing, feature engineering, post-processing, etc. You must copy and paste it into the file and import in functions and classes into the file `app.py` to use it to allow your ml models to work correctly.
 
-## Folder: ml
+### Folder: ml
 This folder must contain your ml models objects saved as files, also your transformation pipelines objects saved as files.
 
-## Folder: venv
-This file contain the virtual environment, every package you install to build you Flask app will be automatically saved into.
-
-## Folder: templates
+### Folder: templates
 This folder must contain the web page templates, the html files. You will define the appearance of the parts of your Flask app using web technologies `(html)`.
 
-## Folder: statics
+### Folder: statics
 This folder must contain the static files your templates will loads, like images, templates' css,js, etc.
 
-# How to use this repository
-## Import the repo
-Clone or download the repo on your local machine.
-## Setup the environment
-1. Install Python 3 on your system. 
-2. Being in the repository, activate the virtual environment : 
+<!-- ## Screenshots
 
-this command line will work in linux
-```console
-source venv/bin/activate
-```        
-
-this command line will work in windows
-```console
-venv\Scripts\activate
-```           
-
-## Run the Flask app
-
-```console
-python app.py
-
-* Serving Flask app 'app' (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: on
- * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 616-705-964
-```
-
-If there is an error, replace `python3` by `python`.
-
-If everything is ok go to your browser at, http://127.0.0.1:5000 you will see you blank homepage you must design and fill.
-You can go to the example page to have a look at a small form doing nothing special: http://127.0.0.1:5000/example .
+<table>
+    <tr>
+        <th>Flask interface</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><img src="./screenshots/.png"/></td>
+    </tr>
+</table> -->
 
 
-# Resources
-Here are some ressources you would read to have a good understanding of Flask :
+## Resources
+Here are some ressources you would explore to have a good understanding of Flask :
 - [Getting started with Flask](https://dev.to/nagatodev/getting-started-with-flask-1kn1)
 - [Video: Flask tutorial](https://www.youtube.com/watch?v=Kja_28SNIow)
+
+
+
+## Contributing
+
+Feel free to make a PR or report an issue 😃.
+
+Oh, one more thing, please do not forget to put a description when you make your PR 🙂.
+
+## Author
+
+- [Emmanuel KOUPOH](https://www.linkedin.com/in/esa%C3%AFe-alain-emmanuel-dina-koupoh-7b974a17a/)
+[![My Twitter Link](https://img.shields.io/twitter/follow/emmanuelkoupoh?style=social)](https://twitter.com/emmanuelkoupoh)
