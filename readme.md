@@ -75,10 +75,10 @@ This file must contain the functions or/and classes you have written to do prepr
 This folder must contain your ml models objects saved as files, also your transformation pipelines objects saved as files.
 
 ### Folder: templates
-This folder must contain the web page templates, the html files. You will define the appearance of the parts of your Flask app using web technologies `(html)`.
+This folder must contain the web page templates, the html files. You will define the appearance of the parts of your Flask app using web technologies `(HTML & CSS, WTForms, ...)`.
 
 ### Folder: statics
-This folder must contain the static files your templates will loads, like images, templates' css,js, etc.
+This folder must contain the static files your templates will loads, like images, templates' CSS,Js, etc.
 
 <!-- ## Screenshots
 
@@ -97,7 +97,10 @@ This folder must contain the static files your templates will loads, like images
 Here are some ressources you would explore to have a good understanding of Flask :
 - [Getting started with Flask](https://dev.to/nagatodev/getting-started-with-flask-1kn1)
 - [Video: Flask tutorial](https://www.youtube.com/watch?v=Kja_28SNIow)
-
+- [Handling Forms in Flask with Flask-WTF](https://hackersandslackers.com/flask-wtforms-forms/)
+- [Handling forms in Flask with Flask-WTForms, Published On March 1, 2022](https://www.analyticsvidhya.com/blog/2022/03/handling-forms-in-flask-with-flask-wtforms/)
+- [Intro to Flask-WTF (Part 1 of 5)](https://www.youtube.com/watch?v=vzaXBm-ZVOQ&list=PLdXrUau65MnMlMGISqq3QmCY8hHoe84jf)
+<!-- - []() -->
 
 
 ## Contributing
