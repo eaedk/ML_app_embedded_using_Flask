@@ -80,17 +80,22 @@ This folder must contain the web page templates, the html files. You will define
 ### Folder: statics
 This folder must contain the static files your templates will loads, like images, templates' CSS,Js, etc.
 
-<!-- ## Screenshots
+## Screenshots
 
 <table>
     <tr>
-        <th>Flask interface</th>
-        <th></th>
+        <td>Titanic App Intefaces</td>
     </tr>
     <tr>
-        <td><img src="./screenshots/.png"/></td>
+        <th>Input Page</th>
+        <th>Prediction Page</th>
+        <!-- <th></th> -->
     </tr>
-</table> -->
+    <tr>
+        <td><img src="./screenshots/input_page.png"/></td>
+        <td><img src="./screenshots/prediction_page.png"/></td>
+    </tr>
+</table>
 
 
 ## Resources
