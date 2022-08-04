@@ -1,4 +1,5 @@
 flask
+Flask-WTF
 WTForms
 scikit-learn
 pandas
