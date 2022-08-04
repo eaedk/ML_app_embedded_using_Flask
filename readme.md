@@ -86,7 +86,6 @@ This folder must contain the static files your templates will loads, like images
     <tr>
         <th>Input Page</th>
         <th>Prediction Page</th>
-        <!-- <th></th> -->
     </tr>
     <tr>
         <td><img src="./screenshots/input_page.png"/></td>
