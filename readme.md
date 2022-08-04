@@ -81,11 +81,8 @@ This folder must contain the web page templates, the html files. You will define
 This folder must contain the static files your templates will loads, like images, templates' CSS,Js, etc.
 
 ## Screenshots
-
+### Titanic App Intefaces
 <table>
-    <tr>
-        <td>Titanic App Intefaces</td>
-    </tr>
     <tr>
         <th>Input Page</th>
         <th>Prediction Page</th>
