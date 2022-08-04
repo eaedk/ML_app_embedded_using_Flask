@@ -54,11 +54,11 @@ For manual installation, you need to have [`Python3`](https://www.python.org/) o
     
     - Demo
 
-          /example
+          http://127.0.0.1:5000/example
 
     - Titanic survival prediction
 
-          /... 
+          http://127.0.0.1:5000/titanic
 
 
 

@@ -110,7 +110,7 @@ def create_app():
         )
 
 
-    @app.route('/predict', methods=['GET', 'POST'])
+    @app.route('/titanic', methods=['GET', 'POST'])
     def predict():
         form = TitanicForm(request.form)
         
@@ -128,10 +128,7 @@ def create_app():
             print([p_class, sex, age, [has_sibsp, has_children], fare, embarked])
             # Prediction
             prediction, predict_prob = predict_survival(passenger_class=p_class, sex=sex, age=age, company=[has_sibsp, has_children], fare=fare, embark_point=embarked)
-            # print([int(p_class), int(sex), float(age), [has_sibsp, has_children], float(fare), int(embarked)])
-            # # Creating input for model for predictions
-            # predict_request = [int(p_class), int(sex), float(age), int(sibsp), int(parch), float(fare), int(embarked)]
-            # predict_request = np.array(predict_request).reshape(1, -1)
+            
             # # Passing the predictions to new view(template)
             return render_template('titanic/predictions.html', prediction=prediction, predict_prob=predict_prob)
 
