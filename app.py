@@ -1,8 +1,39 @@
 from flask import Flask, request, render_template
-from wtforms import Form, validators, StringField
+from flask_wtf import FlaskForm
+from wtforms import Form, validators, StringField, IntegerField, SelectField, DecimalField, RadioField 
+from wtforms.validators import ValidationError 
 import pandas as pd
 import joblib, os
-import utils
+from utils.titanic import predict_survival
+
+class TitanicForm(Form):
+    """
+    This is a form class to retrieve the input from user through form
+    Inherits: request.form class
+    """
+    p_class = IntegerField(u'P Class (Valid Values: 1, 2, 3)', validators=[validators.input_required()])
+    # sex = StringField(u'Sex (0: Female and 1: Male)', validators=[validators.input_required()])
+    # Select = SelectField("gender", choices=[('female','female'), ('male','male')], validators=[validators.input_required()], coerce='str']
+    sex = RadioField('Gender',
+                       choices=[(1, 'Female'), (0, 'Male'), ],
+                       validators=[validators.input_required()])
+
+    # age = StringField(u'Age (For eg.: 24)', validators=[validators.input_required()])
+    age = IntegerField('Age',validators=[validators.input_required()])
+    has_sibsp = RadioField('Travelling with Siblings and/or Spouse',
+                       choices=[("Sibling", 'Yes'), ("no", 'No'), ],
+                       validators=[validators.input_required()])
+    has_children = RadioField('Travelling with Children',
+                       choices=[("Child", 'Yes'), ("no", 'No'), ],
+                       validators=[validators.input_required()])
+    fare = DecimalField(u'Fare (For eg.: 100)', validators=[validators.input_required()])
+    embarked = RadioField('Embarked',coerce=int,
+                       choices=[(0, "S"), (1, "C"), (2, "Q"), ],)
+
+
+    def validate_age(form, field):
+        if (field.data < 0) or (field.data > 110) :
+            raise ValidationError("We're sorry, age must be in this range: [0, 110]")
 
 
 # Unpickle the ML model
@@ -78,18 +109,6 @@ def create_app():
             titles=df.columns.values,
         )
 
-    class TitanicForm(Form):
-        """
-        This is a form class to retrieve the input from user through form
-        Inherits: request.form class
-        """
-        p_class = StringField(u'P Class (Valid Values: 1, 2, 3)', validators=[validators.input_required()])
-        sex = StringField(u'Sex (0: Female and 1: Male)', validators=[validators.input_required()])
-        age = StringField(u'Age (For eg.: 24)', validators=[validators.input_required()])
-        sibsp = StringField(u'Siblings and Spouse Count (For eg.: 3)', validators=[validators.input_required()])
-        parch = StringField(u'Parch (Valid Values: 0, 1, 2, 3, 4, 5, 6)', validators=[validators.input_required()])
-        fare = StringField(u'Fare (For eg.: 100)', validators=[validators.input_required()])
-        embarked = StringField(u'Embarked (Valid Values: 0, 1, 2)', validators=[validators.input_required()])
 
     @app.route('/predict', methods=['GET', 'POST'])
     def predict():
@@ -99,27 +118,22 @@ def create_app():
         if request.method == 'POST' and form.validate():
             # Now save all values passed by user into variables
             p_class = form.p_class.data
-            sex = form.sex.data
+            sex = int(form.sex.data)
             age = form.age.data
-            sibsp = form.sibsp.data
-            parch = form.parch.data
-            fare = form.fare.data
-            embarked = form.embarked.data
+            has_sibsp = form.has_sibsp.data
+            has_children = form.has_children.data
 
+            fare = float(form.fare.data)
+            embarked = form.embarked.data
+            print([p_class, sex, age, [has_sibsp, has_children], fare, embarked])
+            # Prediction
+            prediction, predict_prob = predict_survival(passenger_class=p_class, sex=sex, age=age, company=[has_sibsp, has_children], fare=fare, embark_point=embarked)
+            # print([int(p_class), int(sex), float(age), [has_sibsp, has_children], float(fare), int(embarked)])
             # # Creating input for model for predictions
             # predict_request = [int(p_class), int(sex), float(age), int(sibsp), int(parch), float(fare), int(embarked)]
             # predict_request = np.array(predict_request).reshape(1, -1)
-
-            # # Class predictions from the model
-            # # # prediction = model.predict(predict_request)
-            # prediction = str(prediction[0])
-
-            # # Survival Probability from the model
-            # predict_prob = model.predict_proba(predict_request)
-            # predict_prob = str(predict_prob[0][1])
-
             # # Passing the predictions to new view(template)
-            # return render_template('titanic/predictions.html', prediction=prediction, predict_prob=predict_prob)
+            return render_template('titanic/predictions.html', prediction=prediction, predict_prob=predict_prob)
 
         return render_template('titanic/predict.html', form=form)
 
